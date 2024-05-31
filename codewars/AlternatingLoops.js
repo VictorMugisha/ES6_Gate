@@ -16,28 +16,18 @@
  */
 
 function combine(...arrays) {
-    const resultArray = []
+    const resultArray = [];
+    const maxLength = Math.max(...arrays.map(arr => arr.length));
 
-    const arrObj = []
-    let obj = {}
-    arrays.forEach((array, index, inputArray) => {
-        array.forEach((element, idx) => {
-            obj.value = element
-            obj.index = idx
-            obj.array = index
-            arrObj.push(obj)
-            obj = {}
-        })
-    })
-
-    // arrObj.sort((a, b) => a.index - b.index).forEach(obj => {
-    //     resultArray.push(obj.value)
-    // })
-
-    // console.log(resultArray)
-    // return resultArray
-
-    console.log(arrObj.sort((a, b) => a.array - b.array))
+    for (let i = 0; i < maxLength; i++) {
+        for (let arr of arrays) {
+            if (i < arr.length) {
+                resultArray.push(arr[i]);
+            }
+        }
+    }
+    console.log(resultArray)
+    return resultArray;
 }
 // combine(['a', 'b', 'c'], [1, 2, 3])
 combine(['a', 'b', 'c'], [1, 2, 3, 4, 5], [6, 7], [8])
