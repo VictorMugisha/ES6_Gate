@@ -56,6 +56,15 @@ function isAssociative(op) {
     console.log(`Operation ${op}: ${result}`);
 }
 
+
+
+
+// function isAssociative(op) {
+//     return op === "+" || op === "*"
+// }
+
+
+
 isAssociative('-'); // false
 isAssociative('+'); // true
 isAssociative('/'); // false
