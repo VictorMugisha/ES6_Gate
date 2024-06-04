@@ -31,3 +31,7 @@ function combine(...arrays) {
 }
 // combine(['a', 'b', 'c'], [1, 2, 3])
 combine(['a', 'b', 'c'], [1, 2, 3, 4, 5], [6, 7], [8])
+
+// https://www.codewars.com/kata/5839edaa6754d6fec10000a2/javascript
+
+// https://www.codewars.com/collections/javascript-6kyu (CodeWars Collection)
